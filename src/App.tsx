@@ -5,13 +5,6 @@ import { User } from "./types/api/user";
 import { useState } from "react";
 import { UserProfile } from "./types/userProfile";
 
-const user = {
-  id: 1,
-  name: "taeyong",
-  email: "aaa@gmail.com",
-  address: "hogehuga"
-};
-
 export default function App() {
   const [userProfile, setUserProfile] = useState<Array<UserProfile>>([]);
   const onclickFetchUser = () => {
@@ -33,7 +26,6 @@ export default function App() {
       {userProfile.map((user) => (
         <UserCard key={user.id} user={user} />
       ))}
-      <UserCard user={user} />
     </div>
   );
 }
